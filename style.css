@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Lexend Deca", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.65;
   color: #24323d;
@@ -144,7 +144,7 @@ body {
 .hero {
   position: relative;
   min-height: 65vh;
-  background: url("assets/logo1.png") center / 120% no-repeat;
+  background: url("assets/logo1.png") center / 130% no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -392,5 +392,19 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 750px) {
+  .hero {
+    background: url("assets/logo2.png") center / 100% no-repeat;
+    font-size: 1.5rem;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero p {
+    font-size: 1.25rem;
   }
 }
