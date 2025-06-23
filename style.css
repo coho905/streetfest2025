@@ -144,7 +144,7 @@ body {
 .hero {
   position: relative;
   min-height: 65vh;
-  background: url("assets/logo1.png") center / 130% no-repeat;
+  background: url("assets/logo1.png") center / 120% no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,7 +165,7 @@ body {
 }
 .hero h1 {
   font-size: clamp(2.6rem, 7vw + 0.5rem, 4rem);
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.5px;
   margin-bottom: 1rem;
   font-size: 5.5rem;
@@ -174,6 +174,7 @@ body {
   font-size: 1.25rem;
   margin-bottom: 2rem;
   opacity: 0.95;
+  font-weight: 750;
 }
 
 .about {
