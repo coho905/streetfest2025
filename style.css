@@ -403,6 +403,7 @@ body {
   }
   .hero h1 {
     font-size: 3rem;
+    font-weight: 800;
   }
   .hero p {
     font-size: 1.25rem;
