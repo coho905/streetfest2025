@@ -12,83 +12,123 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navigation -->
-  <header class="nav">
+  <header class="site-header">
     <div class="nav-container">
       <a class="brand" href="#">
-        <img src="./assets/logo1.png" alt="StreetFest logo" height="56" />
+        <img src="assets/nav.png" alt="StreetFest logo" style="height: 100px;"/>
       </a>
 
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-      <label for="nav-toggle" class="nav-toggle-label">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </label>
 
-      <nav class="nav-links">
-        <a href="#">Home</a>
+      <nav class="main-nav">
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#charity">Charity</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section id="about" class="about hero">
-      <div class="container">
-        <h1 style="font-size: 3rem;">Phi Delta Alpha’s annual summer fundraiser</h1>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>StreetFest 2025</h1>
+      <p style="font-size: 2rem;font-weight: 600;">July&nbsp;19 • Phi Delta Alpha</p>
+      <a
+        href="https://getinvolved.dartmouth-hitchcock.org/site/TR?fr_id=2160&pg=entry"
+        class="btn btn-primary"
+        target="_blank"
+        rel="noopener"
+      >Donate Now</a>
+    </div>
+  </section>
+
+  <section id="about" class="about exp-entry">
+    <div class="container narrow">
+      <h2 style="font-size: 3rem;">About Our Event</h2>
+      <p style="font-size: 1.5rem;">
+        Created during the Class of 2025's sophomore summer, StreetFest
+        celebrates Dartmouth's sophomore performance groups while giving back to
+        the Upper Valley community. Each year, proceeds support a charitable
+        cause selected by the house. This year, we're supporting the Upper Valley Haven!
+      </p>
+    </div>
+  </section>
+
+  <section id="schedule" class="schedule exp-entry">
+    <div class="container flex">
+      <div class="schedule-text">
+        <h2 style="font-size: 2rem;">A Full Day of Fun &amp; Fundraising</h2>
         <p style="font-size: 1.5rem;">
-          Joing us July 19th to support the Upper Valley Haven!
+          Enjoy interactive activities hosted by Dartmouth Greek organizations —
+          games, live performances, and family-friendly booths — all supporting
+          Upper Valley Haven.
         </p>
       </div>
-    </section>
 
-    <section id="schedule" class="schedule">
-      <div class="container" style="display: flex; justify-content: center; align-items: center;">
-        <h2 style="width: 50%; padding-right: 5%;">
-          Enjoy a full day of interactive activities sponsored by Dartmouth’s
-          Greek organizations — all raising funds for our cause.
-        </h2>
-
+      <div class="schedule-img-wrapper">
         <img
-          src="./assets/schedule.png"
-          alt="StreetFest 2025 schedule"
+          src="assets/schedule.png"
+          alt="StreetFest day schedule"
           class="schedule-img"
-          style="width: 50%; height: 620px; width: 480px;"
         />
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="charity" class="charity">
-      <div class="container">
-        <h2>
-          All funds raised benefit Upper Valley Haven — a local nonprofit
-          providing food, shelter, and resources for individuals and families
-          overcoming poverty.
-        </h2>
-        <p>
-            Friends, families, and the greater Hanover community are warmly
-            invited to attend and make a difference together.
-          </p>
-      </div>
-    </section>
-  </main>
+  <section id="charity" class="charity exp-entry">
+    <div class="container narrow">
+      <h2 style="font-size: 2.5rem;">Benefiting Upper Valley Haven</h2>
+      <p>
+        Upper Valley Haven provides food, shelter, and critical resources to
+        individuals and families overcoming poverty across the region. <br />
+        Every dollar raised at StreetFest goes <b>directly</b> to these
+        services!
+      </p>
+      <a
+        class="btn btn-secondary"
+        href="https://uppervalleyhaven.org"
+        target="_blank"
+        rel="noopener"
+      >Learn More</a>
+    </div>
+  </section>
 
-  <section class="fun-block">
-    <div class="container">
-      <h2>Created during the Class of 2025’s sophomore summer, StreetFest
-          celebrates Dartmouth’s sophomore performance groups while giving back
-          to the community. Each year, proceeds support a new charitable cause
-          chosen by the house.</h2>
+  <section class="fun-block exp-entry">
+    <div class="container narrow" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;">
+        <img src="assets/logo2.png" alt="StreetFest logo" style="height: 300px;"/>
+      <h2 style="font-size: 1.5rem;">
+        We invite friends and families of the Dartmouth community and members of the Hanover community to join us in support!
+      </h2>
     </div>
   </section>
 
   <footer class="footer" id="contact">
     <p>
-      created by
-      <a href="https://colinwolfe.me" target="_blank" rel="noopener">Colin Wolfe</a>
+      created&nbsp;by
+      <a href="https://colinwolfe.me" target="_blank" rel="noopener">colin&nbsp;wolfe</a>
       •
-      <a href="https://github.com/coho905/streetfest-2025" target="_blank" rel="noopener">source code</a>
+      <a
+        href="https://github.com/coho905/streetfest-2025"
+        target="_blank"
+        rel="noopener"
+      >source&nbsp;code</a>
     </p>
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.exp-entry').forEach(entry => observer.observe(entry));
+  </script>
 </body>
 </html>
