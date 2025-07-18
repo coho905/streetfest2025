@@ -144,7 +144,7 @@ body {
 .hero {
   position: relative;
   min-height: 65vh;
-  background: url("assets/logo1.png") center / 120% no-repeat;
+  background: url("assets/updated_logo.png") center / 120% no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -270,11 +270,11 @@ body {
   background: #24323d;
   color: #fff;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: .75rem .75rem;
   position: relative;
 }
 .footer p {
-  font-size: 0.95rem;
+  font-size: 0.5rem;
   opacity: 0.85;
 }
 .footer a {
